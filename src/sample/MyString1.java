@@ -24,7 +24,8 @@ public class MyString1 {
             return myStringSub;
         }
         int zeLength = end - begin;
-        char substring[] = new char[++zeLength];
+        zeLength++;
+        char substring[] = new char[zeLength];
         //The ++ changes ze length in order to show all required chars
         for (int i = begin; i < end; i++) {
             substring[i] = charAt(i);
@@ -45,6 +46,9 @@ public class MyString1 {
     }
     public boolean equals(MyString1 s) {
         // returns false if a character isn't equal
+        if(s.chars.length != chars.length) {
+            return false;
+        }
         for(int i = 0; i < chars.length; i++) {
             if(s.chars[i] != chars[i]) {
                 return false;
