@@ -28,6 +28,7 @@ public class MyString1 {
         //The ++ changes ze length in order to show all required chars
         for (int i = begin; i < end; i++) {
             substring[i] = charAt(i);
+            //cycles through substring and uses charAt to find the chars.
     }
         MyString1 myString1Sub = new MyString1(substring);
         return myString1Sub;
